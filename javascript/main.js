@@ -17,6 +17,12 @@ const gridItems = document.querySelectorAll('.grid-item');
 
 function drawOver(e){
     e.target.classList.add('active');
+    const currentOpacity = e.target.style.opacity;
+    if (currentOpacity){
+        e.target.style.opacity = Number(currentOpacity) + .1;
+    } else {
+        e.target.style.opacity = .1;
+    }
 }
 
 gridItems.forEach(key => key.addEventListener('mouseover', drawOver));
