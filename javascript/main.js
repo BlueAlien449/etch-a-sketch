@@ -14,6 +14,16 @@ function makeGrid (rows, cols){
 makeGrid(16,16);
 
 const gridItems = document.querySelectorAll('.grid-item');
+const resizeButton = document.querySelector('.resizeGrid');
+resizeButton.addEventListener('click', () => {
+    let gridSize = prompt('What dimensions do you want?');
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+      }
+    makeGrid(gridSize, gridSize);
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(key => key.addEventListener('mouseover', drawOver));
+})
 
 function drawOver(e){
     e.target.classList.add('active');
