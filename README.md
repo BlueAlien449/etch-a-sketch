@@ -1,1 +1,1 @@
-# etch-a-sketch
+This is an Etch-a-Sketch coded in javascript
