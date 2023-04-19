@@ -17,12 +17,16 @@ const gridItems = document.querySelectorAll('.grid-item');
 const resizeButton = document.querySelector('.resizeGrid');
 resizeButton.addEventListener('click', () => {
     let gridSize = prompt('What dimensions do you want?');
-    while (grid.firstChild) {
-        grid.removeChild(grid.firstChild);
-      }
-    makeGrid(gridSize, gridSize);
-    const gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach(key => key.addEventListener('mouseover', drawOver));
+    if (gridSize < 100){
+        while (grid.firstChild) {
+            grid.removeChild(grid.firstChild);
+        }
+        makeGrid(gridSize, gridSize);
+        const gridItems = document.querySelectorAll('.grid-item');
+        gridItems.forEach(key => key.addEventListener('mouseover', drawOver));
+    } else {
+        alert('Choose a number smaller than 100')
+    }
 })
 
 function drawOver(e){

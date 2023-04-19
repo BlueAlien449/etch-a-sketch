@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
@@ -13,15 +14,48 @@
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     height: 512px;
     width: 512px;
-    border-style: solid;
+    border: 2px solid #222222dd;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .grid-item{
-    background-color: aqua;
+    background-color: white;
     border: 1px solid #ddd;
     text-align: center;
 }
 
 .active {
     background-color: black;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.resizeGrid{
+    cursor: pointer;
+    background-color: #fdfdfd;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 9px #252525;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding: 3px 225px;
+}
+
+.resizeGrid:hover {background-color: #dadada}
+
+.resizeGrid:active {
+  background-color: #dadada;
+  box-shadow: 0 5px #000;
+  transform: translateY(4px);
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 50px;
 }
